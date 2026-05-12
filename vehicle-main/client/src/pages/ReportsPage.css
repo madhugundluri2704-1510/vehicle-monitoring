@@ -1,0 +1,101 @@
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.4s ease;
+}
+
+.reports-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.reports-header h2 { font-size: 1.3rem; font-weight: 700; }
+.reports-sub { font-size: 0.82rem; color: var(--text-tertiary); margin-top: 2px; }
+
+.export-btns {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.report-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.report-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--transition-base);
+}
+
+.report-stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.rs-icon { font-size: 1.8rem; }
+.rs-value { font-size: 1.6rem; font-weight: 700; color: var(--text-primary); }
+.rs-label { font-size: 0.72rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.reports-grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-md);
+}
+
+.alert-summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+}
+
+.alert-summary-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.alert-summary-item:last-child { border-bottom: none; }
+
+.as-color {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.as-name { flex: 1; font-size: 0.85rem; color: var(--text-secondary); text-transform: capitalize; }
+.as-count { font-weight: 700; font-size: 0.9rem; color: var(--text-primary); }
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--accent-gradient);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .reports-grid-2 { grid-template-columns: 1fr; }
+  .report-stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .report-stats-row { grid-template-columns: 1fr; }
+}

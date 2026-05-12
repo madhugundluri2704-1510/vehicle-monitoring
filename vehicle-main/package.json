@@ -1,0 +1,16 @@
+{
+  "name": "kmc-swachth-track",
+  "version": "1.0.0",
+  "description": "Kurnool Municipal Corporation Smart Cleaning Vehicle Monitoring System",
+  "scripts": {
+    "dev": "cd server && node server.js",
+    "start": "cd server && node server.js",
+    "client": "cd client && npm run dev",
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "render-build": "cd server && npm install && cd ../client && npm install && npm run build"
+  },
+  "keywords": ["kurnool", "municipal", "waste", "vehicle", "tracking"],
+  "author": "KMC",
+  "license": "ISC"
+}

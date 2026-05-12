@@ -1,0 +1,79 @@
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  animation: fadeIn 0.4s ease;
+}
+
+.vd-header-card { padding: var(--space-xl); }
+
+.vd-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.vd-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-lg);
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.vd-info { flex: 1; min-width: 200px; }
+.vd-info h2 { font-size: 1.5rem; font-weight: 700; }
+.vd-info p { font-size: 0.85rem; color: var(--text-secondary); margin: 4px 0 8px; }
+
+.vd-quick-stats {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.vd-qs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.vd-qs-val { font-weight: 700; font-size: 1rem; }
+.vd-qs-label { font-size: 0.68rem; color: var(--text-tertiary); text-transform: uppercase; }
+
+.vd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.map-card-small { grid-column: span 2; }
+
+.mini-map-container { border-radius: var(--radius-md); overflow: hidden; height: 300px; }
+.mini-map { height: 100%; width: 100%; z-index: 1; }
+
+.info-grid { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-label { font-size: 0.82rem; color: var(--text-tertiary); }
+.info-val { font-size: 0.85rem; font-weight: 500; color: var(--text-primary); text-transform: capitalize; }
+
+@media (max-width: 900px) {
+  .vd-grid { grid-template-columns: 1fr; }
+  .map-card-small { grid-column: span 1; }
+  .vd-header { flex-direction: column; align-items: flex-start; gap: var(--space-md); }
+  .vd-quick-stats { flex-wrap: wrap; gap: var(--space-sm); }
+}

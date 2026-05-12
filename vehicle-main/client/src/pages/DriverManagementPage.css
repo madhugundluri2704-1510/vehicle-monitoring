@@ -1,0 +1,1 @@
+.score-cell { display: flex; align-items: center; gap: var(--space-sm); font-size: 0.8rem; }

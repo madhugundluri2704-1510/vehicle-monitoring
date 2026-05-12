@@ -1,0 +1,10 @@
+.dashboard { display: flex; flex-direction: column; gap: var(--space-lg); padding: var(--space-lg); animation: fadeIn 0.3s ease; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--space-md); }
+.dashboard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+.dashboard-grid .span-2 { grid-column: span 2; }
+.chart-container { padding-top: var(--space-sm); }
+.fuel-cell { display: flex; align-items: center; gap: var(--space-sm); font-size: 0.8rem; }
+.vehicle-table-card { animation: slideUp 0.4s ease; }
+.alerts-card .alerts-list { max-height: 320px; overflow-y: auto; }
+@media (max-width: 1024px) { .dashboard-grid { grid-template-columns: 1fr 1fr; } .dashboard-grid .span-2 { grid-column: span 1; } }
+@media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
